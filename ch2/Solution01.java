@@ -14,7 +14,7 @@ public class Solution01 {
 	}
 
 	public static void deleteDups(LinkedListNode<String> n) {
-		Hashtable table = new Hashtable();// Use hashtable to check Existence of
+		Hashtable<String, Boolean> table = new Hashtable<String, Boolean>();// Use hashtable to check Existence of
 											// certain key
 
 		LinkedListNode<String> previous = null;// perviouse node in linkedList
