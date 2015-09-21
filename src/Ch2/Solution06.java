@@ -54,5 +54,6 @@ public class Solution06 {
 	
 		    boolean result = isPalindrome(head);
 		    System.out.println(result);
+		    in.close();
 }
 }

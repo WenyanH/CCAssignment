@@ -4,7 +4,7 @@ package Ch2;
 
 	public class Solution03 {
 		
-	    public static void print(LinkedList head){ //Input and get the output of the Linkedlist
+	    public static void print(LinkedList<String> head){ //Input and get the output of the Linkedlist
 	    	System.out.print(head.get(0));
 	    	for(int i =1; i<head.size(); i++){ //int i=1 in LinkedList
 	    		System.out.printf("->%s", head.get(i));

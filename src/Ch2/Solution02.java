@@ -55,7 +55,7 @@ public class Solution02 {
 	
 		    LinkedListNode<String> result = nToLast(head, num);
 		    System.out.println(result.data);
-		
+		in.close();
 		
 //		LinkedListNode<String> iterator = head;
 //		while(iterator != null) {

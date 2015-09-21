@@ -68,8 +68,10 @@ public static void main(String[] args) {
 			tail = temp;
 		}
 	}
+
 	
 	    LinkedListNode<String> result = partition(head, num);
 	    print(result);
+		in.close();
 }
 }
