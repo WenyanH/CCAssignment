@@ -45,13 +45,13 @@ public static int secondCheckBlock(int [] blocks, int rangeSize){
 public static byte[] getBitVector(String filename, int blockIndex, int rangeSize) throws FileNotFoundException{
 	int start=blockIndex*rangeSize;
 	int end=start+rangeSize;
-	byte[] bitVector=new byte[rangeSize/4];//4 is the Byte.SIZE;
+	byte[] bitVector=new byte[rangeSize/8];//8 is the Byte.SIZE;
 	Scanner in =new Scanner (new FileReader(filename));
 	while(in.hasNextInt()){
 		int value=in.nextInt();
 		if(value>=start && value<end){
 			int offset=value-start;
-			bitVector[offset/4]=bitVector[offset/4]|=1<<(offset%4);
+			bitVector[offset/8]=bitVector[offset/8]|=1<<(offset%8);
 		}
 	}
 	in.close();
@@ -60,9 +60,9 @@ public static byte[] getBitVector(String filename, int blockIndex, int rangeSize
 public static int findZero(byte[] bitVector){
 	for(int i=0;i<bitVector.length;i++){
 		if(bitVector[i]!=~0){//Check if there exists 0 in bitVector.
-			for (int j=0; j<4;j++){
+			for (int j=0; j<8;j++){
 				if((bitVector[j]&(1<<j))==0){
-					return i*4+j;
+					return i*8+j;
 				}
 			}
 		}
