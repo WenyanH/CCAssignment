@@ -1,2 +1,2 @@
 # CCAssignment
-My andrew ID is wenyanh.
+This is a course assignment for 11601
